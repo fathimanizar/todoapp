@@ -2,6 +2,7 @@ import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRo
 
 import React, { useState } from 'react'
 
+
 const Todos = () => {
     var [item1,setItem1]= useState([]);
     var [item2,setItem2]= useState([]);
@@ -40,47 +41,50 @@ const Todos = () => {
 
   return (
     <div style={{backgroundColor:'rgb(246, 246, 161)'}} >
+    
+<img height="300" width="55%" src="https://icon-library.com/images/task-list-icon/task-list-icon-16.jpg" alt="todoimage" />
 
-            <Typography variant='h3' style={{color:'rgb(2, 2, 58)'}}>ToDo Application</Typography>
-            <br /><br /><br />
+            <Typography variant='h3' style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>ToDo Application</Typography>
+            <br /><br />
       
             <TextField id="form1" variant='outlined' label='Enter Item here' onChange={itemInputHandler}/>
             <br /><br />
             <TextField id="form2" variant='outlined' label='Enter Description here' onChange={desInputHandler}/>
             <br /><br />
-            <TextField id="form3" variant='outlined' label='Enter Quantity here' onChange={qtyInputHandler}/>
+            <TextField id="form3" style={{fontFamily:'cursive'}}  variant='outlined' label='Enter Quantity here' onChange={qtyInputHandler}/>
         
             <br /><br />
-            <Button variant='contained' style={{backgroundColor:'rgb(2, 2, 58)'}} onClick={changeItem}>Add Todo</Button>
+            <Button variant='contained' style={{backgroundColor:'rgb(2, 2, 58)',borderRadius:'8px',fontFamily:'cursive'}} onClick={changeItem}>Add Todo</Button>
             <br /><br />
+         
 
                     <TableContainer> 
-                        <Table style={{backgroundColor:'rgb(239, 228, 83)',width:'50%',marginLeft: 'auto',marginRight:'auto'}}>
+                        <Table style={{backgroundColor:'rgb(245, 227, 121)',width:'45%',marginLeft: 'auto',marginRight:'auto',marginBottom:'50px',borderRadius:'20px'}}>
 
                             <TableHead>
-                                <TableRow>
-                                    <TableCell>ITEM</TableCell>
-                                    <TableCell>DESCRIPTION</TableCell>
-                                    <TableCell>QUANTITY</TableCell> 
+                                <TableRow >
+                                    <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>ITEM</TableCell>
+                                    <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>DESCRIPTION</TableCell>
+                                    <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>QUANTITY</TableCell> 
                                 </TableRow> 
                             </TableHead>
 
                             <TableBody>
                                 <TableRow>
-                                    <TableCell>
+                                    <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>
                                     {item1.map((value,index)=>{
                                         return(<p>{value}</p>)
                                     })}
 
                                     </TableCell>
 
-                                    <TableCell>
+                                    <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>
                                     {item2.map((value,index)=>{
                                         return(<p>{value}</p>)
                                     })}
                                     </TableCell>
 
-                                   <TableCell>
+                                   <TableCell style={{color:'rgb(2, 2, 58)',fontFamily:'cursive'}}>
                                    {item3.map((value,index)=>{
                                         return(<p>{value}</p>)
                                     })}
